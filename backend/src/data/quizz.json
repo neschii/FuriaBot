@@ -1,0 +1,47 @@
+[
+  {
+    "id": 1,
+    "pergunta": "Em que ano a FURIA foi fundada?",
+    "opcoes": [
+      {"texto": "2015", "isCorreta": false},
+      {"texto": "2017", "isCorreta": true},
+      {"texto": "2019", "isCorreta": false}
+    ]
+  },
+  {
+    "id": 2,
+    "pergunta": "Qual destes jogos NÃO é um cenário atual de competição da FURIA?",
+    "opcoes": [
+      {"texto": "Dota 2", "isCorreta": true},
+      {"texto": "CS2", "isCorreta": false},
+      {"texto": "Valorant", "isCorreta": false}
+    ]
+  },
+  {
+    "id": 3,
+    "pergunta": "Qual é o nome do CEO da FURIA?",
+    "opcoes": [
+      {"texto": "Gabriel FalleN", "isCorreta": false},
+      {"texto": "Jaime Pádua", "isCorreta": true},
+      {"texto": "Alexandre Gaules", "isCorreta": false}
+    ]
+  },
+  {
+    "id": 4,
+    "pergunta": "Onde fica a sede principal da FURIA?",
+    "opcoes": [
+      {"texto": "Rio de Janeiro", "isCorreta": false},
+      {"texto": "São Paulo", "isCorreta": true},
+      {"texto": "Miami", "isCorreta": false}
+    ]
+  },
+  {
+    "id": 5,
+    "pergunta": "Quem é a nova contratação da FURIA para o cargo de assistente de engenharia de software?",
+    "opcoes": [
+      {"texto": "CoeSapao", "isCorreta": false},
+      {"texto": "João Silva", "isCorreta": false},
+      {"texto": "Manoella Pisaneschi", "isCorreta": true}
+    ]
+  }
+]
