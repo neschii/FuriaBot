@@ -1,121 +1,167 @@
-🐺 FURIA Fan Chatbot 🤖
-FURIA Banner
 
-📋 Sobre o Projeto
-Este projeto é uma landing page interativa com um chatbot exclusivo para os fãs da FURIA Esports! Desenvolvido para aproximar os torcedores de sua equipe favorita, o bot permite acompanhar partidas ao vivo, resultados, próximos campeonatos, verificar quais streamers estão online e muito mais!
+# 🐺 FURIA Fan Chatbot 🤖  
+**Landing page interativa + Chatbot inteligente para fãs da FURIA Esports**
 
-✨ Funcionalidades Principais
-🏠 Landing Page Moderna - Interface elegante e responsiva que representa a identidade da FURIA
-💬 Chatbot Interativo - UI amigável com botões e texto
-🎮 Status de Livestreams - Verifique quais jogadores da FURIA estão transmitindo ao vivo na Twitch
-🏆 Acompanhamento de Partidas - Veja partidas ao vivo, resultados recentes e próximos jogos
-🧠 Quiz da FURIA - Teste seus conhecimentos sobre a organização
-🆘 Tira-Dúvidas - Pergunte qualquer coisa sobre a FURIA e receba respostas inteligentes
-🛒 Loja - Acesso rápido à loja oficial da FURIA
-🛠️ Tecnologias Utilizadas
-Frontend
-React.js - Framework para criação da interface
-CSS - Estilização moderna e responsiva
-Lucide React - Biblioteca de ícones
-Backend
-Node.js - Ambiente de execução
-Express - Framework para criação da API
-Axios - Cliente HTTP para requisições
-UUID - Geração de IDs de sessão
-dotenv - Gerenciamento de variáveis de ambiente
-APIs Externas
-OpenRouter API - Para o tira-dúvidas inteligente
-Twitch API - Para verificar o status das streams
-PandaScore API - Para buscar informações sobre partidas e torneios
-📁 Estrutura do Projeto
-Backend
+![furiagg_wallpaper_raian-860x507-1](https://github.com/user-attachments/assets/5b063b98-ca58-40be-9097-49473e17a1be)
+
+---
+
+## 📋 Sobre o Projeto  
+Este projeto é uma **landing page interativa** com um **chatbot exclusivo** para os fãs da **FURIA Esports**! Desenvolvido para aproximar os torcedores de sua equipe favorita, o bot permite acompanhar **partidas ao vivo**, **resultados**, **próximos campeonatos**, verificar **quais streamers estão online** e muito mais!
+
+---
+
+## ✨ Funcionalidades Principais
+
+- 🏠 **Landing Page Moderna** — Interface elegante e responsiva com a identidade da FURIA  
+- 💬 **Chatbot Interativo** — UI amigável com botões e mensagens dinâmicas  
+- 🎮 **Status de Livestreams** — Veja quais jogadores da FURIA estão ao vivo na Twitch  
+- 🏆 **Acompanhamento de Partidas** — Partidas ao vivo, últimos resultados e próximos jogos  
+- 🧠 **Quiz da FURIA** — Teste seus conhecimentos sobre a organização  
+- 🆘 **Tira-Dúvidas** — Pergunte qualquer coisa sobre a FURIA e receba respostas inteligentes  
+- 🛒 **Loja** — Acesso direto à loja oficial da FURIA  
+
+---
+
+## 🛠️ Tecnologias Utilizadas
+
+### Frontend
+- **React.js** — Framework para construção da interface  
+- **CSS** — Estilização moderna e responsiva  
+- **Lucide React** — Biblioteca de ícones  
+
+### Backend
+- **Node.js** — Ambiente de execução  
+- **Express** — Criação da API  
+- **Axios** — Requisições HTTP  
+- **UUID** — Geração de IDs únicos  
+- **dotenv** — Variáveis de ambiente  
+
+### APIs Externas
+- **OpenRouter API** — Respostas inteligentes no tira-dúvidas  
+- **Twitch API** — Verifica o status das streams da FURIA  
+- **PandaScore API** — Informações de partidas e torneios  
+
+---
+
+## 📁 Estrutura do Projeto
+
+### Backend
+
+```
 backend/
-├── .env.example         # Exemplo de configuração das variáveis de ambiente
-├── package.json         # Dependências e scripts do backend
-├── src/
-│   ├── data/            # Dados estáticos usados pelo chatbot
-│   │   ├── duvidas.json # Informações básicas sobre a FURIA
-│   │   └── quizz.json   # Perguntas e respostas para o quiz
-│   ├── services/
-│   │   └── chatbotService.js # Lógica principal do chatbot
-│   ├── utils/
-│   │   ├── openrouterApi.js  # Integração com IA para tira-dúvidas
-│   │   ├── pandaScoreApi.js  # Busca de partidas e torneios
-│   │   └── twitchApi.js      # Verificação de streamers online
-│   ├── stateManager.js       # Gerenciamento de estados das sessões
-│   └── index.js              # Ponto de entrada do servidor
-Frontend
+├── .env.example              # Exemplo de variáveis de ambiente
+├── package.json              # Dependências e scripts
+└── src/
+    ├── data/
+    │   ├── duvidas.json      # Dados básicos sobre a FURIA
+    │   └── quizz.json        # Perguntas do quiz
+    ├── services/
+    │   └── chatbotService.js # Lógica do chatbot
+    ├── utils/
+    │   ├── openrouterApi.js  # Integração com IA
+    │   ├── pandaScoreApi.js  # Dados de partidas
+    │   └── twitchApi.js      # Status dos streamers
+    ├── stateManager.js       # Gerenciamento de sessões
+    └── index.js              # Ponto de entrada
+```
+
+### Frontend
+
+```
 frontend/
-├── package.json         # Dependências e scripts do frontend
+├── package.json              # Dependências e scripts
 ├── public/
-│   └── index.html       # Template HTML base
-├── src/
-│   ├── components/
-│   │   ├── ChatBot/     # Componentes do chat
-│   │   │   ├── ChatWindow.js  # Container principal do chat
-│   │   │   ├── Message.js     # Renderiza mensagens individuais
-│   │   │   └── InputArea.js   # Campo de entrada do usuário
-│   │   └── landing/     # Componentes da landing page
-│   │       └── Landing.js     # Header e seção hero
-│   ├── App.js           # Componente raiz
-│   └── index.js         # Ponto de entrada do React
-🧩 Design Patterns Utilizados
-State Manager Pattern - Implementado no stateManager.js para gerenciar o estado da conversa em cada sessão
-Factory Pattern - Utilizado no chatbotService.js para criar diferentes tipos de mensagens
-Observer Pattern - Implementado na atualização do chat em tempo real
-Adapter Pattern - Usado nas camadas de API (Twitch, PandaScore, OpenRouter)
-Chain of Responsibility - Implementado no fluxo de mensagens do chat
-Composite Pattern - Utilizado na estrutura de mensagens e opções
-📊 Fluxograma do Chatbot
+│   └── index.html            # Template base
+└── src/
+    ├── components/
+    │   ├── ChatBot/
+    │   │   ├── ChatWindow.js # Componente principal
+    │   │   ├── Message.js    # Renderiza mensagens
+    │   │   └── InputArea.js  # Campo de entrada
+    │   └── landing/
+    │       └── Landing.js    # Header e seção hero
+    ├── App.js                # Componente raiz
+    └── index.js              # Entrada do React
+```
 
-🚀 Como Executar o Projeto
-Pré-requisitos
-Node.js instalado (v14+ recomendado)
-NPM ou Yarn instalado
-Contas e chaves de API para Twitch, OpenRouter e PandaScore
-Configuração
-Clone o repositório
+---
 
+## 🧩 Design Patterns Utilizados
+
+- **State Manager Pattern** — Controle de sessões via `stateManager.js`  
+- **Factory Pattern** — Criação de mensagens no `chatbotService.js`  
+- **Observer Pattern** — Atualização dinâmica do chat  
+- **Adapter Pattern** — Integrações com APIs externas  
+- **Chain of Responsibility** — Fluxo das mensagens do chat  
+- **Composite Pattern** — Organização de mensagens e opções  
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Pré-requisitos
+- Node.js (v14 ou superior)
+- NPM ou Yarn
+- Chaves das APIs: **Twitch**, **OpenRouter** e **PandaScore**
+
+### Passo a passo
+
+```bash
+# Clone o repositório
 git clone https://github.com/seu-usuario/furia-chatbot.git
 cd furia-chatbot
-Instale as dependências (Backend)
 
+# Instale as dependências do backend
 cd backend
 npm install
-Configure as variáveis de ambiente
 
+# Configure as variáveis de ambiente
 cp .env.example .env
-# Edite o arquivo .env com suas chaves de API
-Instale as dependências (Frontend)
+# Edite o arquivo .env com suas chaves
 
+# Instale as dependências do frontend
 cd ../frontend
 npm install
-Execução
-Inicie o backend
+```
 
+### Iniciando o projeto
+
+```bash
+# Em um terminal, inicie o backend
 cd backend
 npm start
-Inicie o frontend (em outro terminal)
 
+# Em outro terminal, inicie o frontend
 cd frontend
 npm start
-Acesse http://localhost:3000 no seu navegador
+```
 
-🔍 Detalhes da Implementação
-Backend
-Session Management: Cada conversa tem um ID único e estado próprio
-State Machine: O chatbot funciona com uma máquina de estados que controla o fluxo da conversa
-API Integration: Integrações robustas com Twitch, PandaScore e OpenRouter
-Error Handling: Tratamento de erros completo para garantir resiliência
-Frontend
-Responsive Design: Interface adaptável para dispositivos móveis e desktop
-Real-time Updates: Atualizações em tempo real das mensagens
-Animation Effects: Transições e animações suaves para melhor experiência
-Dynamic Content: Conteúdo dinâmico baseado nas APIs integradas
+Acesse: [http://localhost:3000](http://localhost:3000)
 
-📜 Licença
-Este projeto está licenciado sob a Licença MIT - veja o arquivo LICENSE para detalhes.
+---
 
-⭐ Desenvolvido com orgulho para a comunidade FURIA! ⭐
-#VamosFURIA #OusadiaEAlegria 🖤🤍
+## 🔍 Detalhes da Implementação
 
+### Backend
+- **Gerenciamento de Sessões** — Cada usuário tem um ID e contexto únicos  
+- **Máquina de Estados** — Controle do fluxo da conversa  
+- **Integração com APIs** — Comunicação com Twitch, PandaScore e OpenRouter  
+- **Tratamento de Erros** — Garantia de estabilidade do bot  
+
+### Frontend
+- **Design Responsivo** — Compatível com dispositivos móveis  
+- **Atualizações em Tempo Real** — Mensagens dinâmicas e instantâneas  
+- **Animações Suaves** — Transições e UX aprimorado  
+- **Conteúdo Dinâmico** — Dados alimentados via APIs externas  
+
+---
+
+## 📜 Licença
+
+Este projeto está licenciado sob a **Licença MIT**. Consulte o arquivo [LICENSE](./LICENSE) para mais detalhes.
+
+---
+
+## ⭐ Desenvolvido com orgulho para a comunidade FURIA! ⭐  
+**#VamosFURIA #OusadiaEAlegria 🖤🤍**
