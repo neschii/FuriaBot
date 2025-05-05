@@ -80,7 +80,9 @@ frontend/
     │   │   ├── Message.js    # Renderiza mensagens
     │   │   └── InputArea.js  # Campo de entrada
     │   └── landing/
-    │       └── Landing.js    # Header e seção hero
+    │    │   └── Landing.js    # Header e seção hero
+    │    └── livestream/
+    │       └── livestream.js    # area de streamer
     ├── App.js                # Componente raiz
     └── index.js              # Entrada do React
 ```
